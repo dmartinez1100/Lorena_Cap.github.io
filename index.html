@@ -5,35 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src=script.js></script>
-    <title>Documeewqrent</title>
+    <title>Questionario</title>
 </head>
 <body>
-    
-    <div class='container'>
-
+    <!--classes respuesta preguntas-->
+    <div class='container' id = 'cuerpo'>
         <div class='head'>
             <p>Este es el titulo</p>
         </div>
-        <div class='pregunta'>
-            <div>1.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam fugit neque a ad minima voluptatem autem repellendus asperiores voluptates dolores quis vitae dicta corporis, repudiandae illum quas accusamus numquam saepe.</div>
-        <input  type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input  type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <input  type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-        </div>
-
-        <div class= 'pregunta'>
-            <div>2.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam quod consequatur soluta obcaecati! Fugiat delectus natus eius consequuntur voluptas laboriosam reprehenderit accusamus ducimus! Perspiciatis accusantium eaque, suscipit ducimus autem voluptas!</div>
-        <input  type="radio" id="male" name="cosa" value="male">
-        <label for="male">Male</label><br>
-        <input  type="radio" id="female" name="cosa" value="female">
-        <label for="female">Female</label><br>
-        <input  type="radio" id="other" name="cosa" value="other">
-        <label for="other">Other</label>
-        </div>
-
+        <script>new_qest('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'a',
+        'b',
+        'c',
+        'd',
+        'c')
+        new_qest('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'a',
+        'b',
+        'c',
+        'd',
+        'a')
+        new_qest('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'a',
+        'bLorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'c',
+        'dLorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'a')
+        new_qest('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod nobis recusandae tempora ea rem voluptatibus doloremque molestias? Consectetur quisquam totam nulla et ad hic cum nam facilis minus dolorum?',
+        'a',
+        'b',
+        'c',
+        'd',
+        'a')
+        </script>
     </div>
+    <div class='boton' ><button onclick="resp()">Acabe!</button></div>
 </body>
+
 </html>
