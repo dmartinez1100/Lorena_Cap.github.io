@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300;1,400&family=Oswald:wght@300&display=swap');
+body{
+    display: center;
+}
+.fondo{
+    background-image: url("img/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+.container{
+    width: 75%;
+    margin: auto;
+    opacity: 1;
+}
+.head{
+    text-align: center;
+    grid-template-rows: 100%;
+    background-color: rgba(255,183,31,1);
+    padding: 0px 0px 0px 0px;
+    font: 50px piedra;
+}
+.boton{
+    display: block;
+    margin: auto;
+    width: 30%;
+    border-radius: 10px;
+    align-content: center;
+}
+.boton1{
+    margin: auto;
+    align-content: center;
+    border-radius: 10px;
+    background-color:red;
+    font: 2vw piedra;
+    color: white;
+    height: 50px;
+}
+.boton1:hover{
+    margin: auto;
+    align-content: center;
+    border-radius: 10px;
+    border-color: white;
+    background-color:red;
+    font: 2vw piedra;
+    color: white;
+    height: 50px;
+}
+.pregunta{
+    /* up right*/
+    display: block;
+    text-align: justify;
+    padding: 0px 20px 0px 20px;
+}
+.enunciado{
+    padding: 0 0 10px 0;
+    font: 2vw Acme;
+}
+.respuesta{
+    padding: 0 0 10px 0;
+    font: 1.5vw Muli;
+}
+.respuesta_txt:hover{
+    background-color: rgba(255,183,31,.5);
+    border-radius: 10px;
+}
+.texto{
+    padding: 0 0 10px 0;
+    font: 2vw Muli;
+}
+.respuestas_c{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.respuestas_s{
+    display: inline;
+}
+.imagen{
+    justify-self: right;
+}
+.respuestas{
+    padding: 10%;
+}

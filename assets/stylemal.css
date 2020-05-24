@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+body{
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+.img1{
+    justify-self: right;
+    padding: 0;
+    width: 80%;
+    font: 50px piedra;
+}
+.img2{
+    padding: 0;
+    justify-self: left;
+    width: 80%;
+}
+.boton{
+    width: 50%;
+    align: center;
+}
+.texto{
+    align-self: center;
+}
