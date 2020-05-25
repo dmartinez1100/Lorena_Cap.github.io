@@ -54,11 +54,12 @@ respuestas = []
 element = document.getElementById("inombre")
 element.setAttribute('value', nombre2)
 
+shuffleArray(vec_preg)
 for(var i=0;i<vec_preg.length;i++){
     j = JSON.parse(vec_preg[i])
     new_qest(j.texto,j.enunciado,j.respuestas.a,j.respuestas.b,j.respuestas.c,j.respuestas.d,j.resp_c,j.imagen,j.link)
 }
-//console.log(respuestas);
+console.log(respuestas);
 
 function comprobar_resp(){
     var flag = true;
@@ -83,18 +84,18 @@ function comprobar_resp(){
         document.getElementById('mensaje0').innerHTML += '<p>Olvidaste poner tu nombre</p>'
         flag = false
     }
-    console.log(preg_mal)
     if(flag){
         if(preg_mal == 0){
-            console.log("Correcto")
             var URL = 'bien.html?nombre='+encodeURIComponent(nombre);
             window.location.href = URL;
         }
         else {
-            console.log("falso")
             var URL = 'mal.html?nombre='+ encodeURIComponent(nombre) + "&preg_mal=" + encodeURIComponent(preg_mal);
             window.location.href = URL;
         }
+    }
+    else{
+        window.scrollTo(0, 0)
     }
 }
 
@@ -121,7 +122,6 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
     }
     if(texto.includes("youtube.com")){
         texto = '<iframe width="100%" height="500vw" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>'
-        console.log("yt");
     }
     code1 = '<div class="pregunta">'+'<div class="texto">'+texto+'</div>'+'<div '+'class = "enunciado"'+' >'+num+'. '+enunciado+'</div><div '+' id=mensaje'+num+''+' class="mensaje"></div><div class="'+clase_i+'">'+'<div class="respuestas">'
 
@@ -144,4 +144,13 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
 function pres(num){
     elemento = document.getElementById('mensaje'+num)
     elemento.innerHTML = ""
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
