@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title>Questionario</title>
+
+    <div class='head'>
+        <p>Capacitacion, Decreto 633 De 2017, Alcaldia Local De Los Martires</p>
+    </div>
 </head>
 <body>
     <div class= 'fondo'>
-        <div class='head'>
-            <p>Capacitacion, Decreto 633 De 2017, Alcaldia Local De Los Martires</p>
-        </div>
-        <!--classes respuesta preguntas-->
-        <div class='container' id = 'cuerpo'>
+        <!--classes= "respuesta preguntas mensaje"-->
+            <div class='container' id = 'cuerpo'>
+                <div class="mensaje" id="mensaje0"></div>
+            <div class="dnombre">
+                <label id="lnombre" for="inombre">Ingresa aqui tu nombre: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="inombre" value=""/> 
+            </div>
             <script src=script.js></script>
         </div>
         <div class='boton' ><button class='boton1' onclick="comprobar_resp()">Finalizar</button></div>

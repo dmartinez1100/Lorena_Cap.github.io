@@ -27,63 +27,76 @@ vec_preg = ['{"texto":"DECRETO 633 DE 2017:<br>Artículo 1°.- Delegar en los Al
 '{"texto":"" ,"enunciado": "Cual es la definición de PUM:","respuestas": {"a": "a) Establecen las características de un producto o los procesos y métodos de producción con ellas relacionados.","b":"b) Requisitos legales que se aplican a la medición, las unidades de medida, los instrumentos de medida y los métodos de medida","c":"c) Indica el precio del producto preempacado o a granel de acuerdo a la unidad de medida ya sea peso, volumen, longitud, área o cualquier magnitud que se ofrece a los consumidores.","d":""},"resp_c": "c","imagen":"PUM.gif"}'
 ]
 
-//var queryString = new Array();
+var queryString = new Array();
 
-//console.log(queryString)
-//var params = window.location.search.split('?')[1].split('&');
-//for (var i = 0; i < params.length; i++) {
- //   var key = params[i].split('=')[0];
-  //  var value = decodeURIComponent(params[i].split('=')[1]);
-   // queryString[key] = value;
-//}
+if (queryString.length == 0) {
+    if (window.location.search.split('?').length > 1) {
+        var params = window.location.search.split('?')[1].split('&');
+        for (var i = 0; i < params.length; i++) {
+            var key = params[i].split('=')[0];
+            var value = decodeURIComponent(params[i].split('=')[1]);
+            queryString[key] = value;
+        }
+    }
+}
 
-//if(queryString["nombre"] != null){
- //   nombre2 = queryString["nombre"]
-//}
-//else
- //   nombre2 = ""
+if(queryString["nombre"] != null){
+    nombre2 = queryString["nombre"]
+}
+else
+    nombre2 = ""
 
 preguntas = 0
 respuestas = []
-
 //pr = JSON.parse(vec_preg[2])
 //console.log(pr.link.URL[0])
+
+element = document.getElementById("inombre")
+element.setAttribute('value', nombre2)
+
 for(var i=0;i<vec_preg.length;i++){
     j = JSON.parse(vec_preg[i])
     new_qest(j.texto,j.enunciado,j.respuestas.a,j.respuestas.b,j.respuestas.c,j.respuestas.d,j.resp_c,j.imagen,j.link)
 }
-console.log(respuestas)
+console.log(respuestas);
 
 function comprobar_resp(){
-    var inputs = []
-    var flag = true
-
+    var flag = true;
+    var preg_mal = 0;
+    var preg_sin = 0
     for(var i=1;i<=preguntas;i++){
         elemento = document.querySelector('input[name="'+i+'"]:checked')
         if (elemento == null){
+            preg_sin += 1;
+            document.getElementById('mensaje'+i).innerHTML = ''
+            document.getElementById('mensaje0').innerHTML = ''
             document.getElementById('mensaje'+i).innerHTML += '<p>No respondiste esta pregunta</p>'
+            document.getElementById('mensaje0').innerHTML += '<p>Revis tus respuestas, hay '+preg_sin+' preguntas sin responder</p>'
             flag = false
             }
-        else{
-            elemento = elemento.value
-            inputs.push(elemento)}
+        else if(elemento.value !== respuestas[i-1]){
+                preg_mal +=1;
+            }
     }
-    console.log(flag)
+    nombre = document.getElementById("inombre").value
+    if (nombre == ""){
+        document.getElementById('mensaje0').innerHTML += '<p>Olvidaste poner tu nombre</p>'
+        flag = false
+    }
+    console.log(preg_mal)
     if(flag){
-        if(JSON.stringify(respuestas)==JSON.stringify(inputs)){
+        if(preg_mal == 0){
             console.log("Correcto")
-            console.log("falso")
             var URL = 'bien.html?nombre='+encodeURIComponent(nombre);
             window.location.href = URL;
         }
         else {
             console.log("falso")
-            var URL = 'mal.html?nombre='+encodeURIComponent(nombre);
+            var URL = 'mal.html?nombre='+ encodeURIComponent(nombre) + "&preg_mal=" + encodeURIComponent(preg_mal);
             window.location.href = URL;
         }
     }
 }
-
 
 function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
     container = document.getElementById('cuerpo')
@@ -104,10 +117,20 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
             string_a_agregar = '<a href="'+links[i]+'">'+textos[i]+'</a>'
             enunciado = [enunciado.slice(0, agregado+pos[i]), string_a_agregar, enunciado.slice(agregado+pos[i])].join('');
             agregado += string_a_agregar.length
-            console.log(enunciado)
         }
     }
-    code1 = '<div class="pregunta">'+'<div class="texto">'+texto+'</div>'+'<div '+'class = "enunciado"'+' >'+num+'. '+enunciado+'</div><div '+' id=mensaje'+num+''+' class="mensaje"></div><div class="'+clase_i+'">'+'<div class="respuestas"><div class="respuesta">'+'<input onclick="pres('+num+')"'+' id=a'+num+''+' type="radio" name="'+num+'" value="a"><label class="respuesta_txt"'+'width="100%" '+'for="a'+num+'">'+a+'</label>'+'</div>'+'<br>'+'<div class="respuesta">'+'<input onclick="pres('+num+')"'+' id=b'+num+''+' type="radio" name="'+num+'" value="b"><label class="respuesta_txt" for="b'+num+'">'+b+'</label>'+'</div>'+'<br>'+'<div class="respuesta">'+'<input onclick="pres('+num+')"'+' id=c'+num+''+' type="radio"name="'+num+'" value="c"><label class="respuesta_txt" for="c'+num+'">'+c+'</label>'+'</div>'+'<br>'+'<div class="respuesta">'+'<input onclick="pres('+num+')"'+' id=d'+num+''+' type="radio" name="'+num+'" value="d"><label class="respuesta_txt"for="d'+num+'">'+d+'</label>'+'</div></div>'+'<div class="imagen"><img width="100%" src="'+imagen+'"alt=""></div></div></div>';
+    code1 = '<div class="pregunta">'+'<div class="texto">'+texto+'</div>'+'<div '+'class = "enunciado"'+' >'+num+'. '+enunciado+'</div><div '+' id=mensaje'+num+''+' class="mensaje"></div><div class="'+clase_i+'">'+'<div class="respuestas">'
+
+    code1+='<div class="respuesta respuesta_txt"><input onclick="pres('+num+')"'+' id=a'+num+''+' type="radio" name="'+num+'" value="a"><label '+'width="100%" '+'for="a'+num+'">'+a+'</label>'+'</div><br>'
+
+    code1+='<div class="respuesta respuesta_txt">'+'<input onclick="pres('+num+')"'+' id=b'+num+''+' type="radio" name="'+num+'" value="b"><label for="b'+num+'">'+b+'</label>'+'</div><br>'
+
+    if (c != "")code1+='<div class="respuesta respuesta_txt">'+'<input onclick="pres('+num+')"'+' id=c'+num+''+' type="radio"name="'+num+'" value="c"><label for="c'+num+'">'+c+'</label>'+'</div><br>'
+
+    if(d != "")code1+='<div class="respuesta respuesta_txt">'+'<input onclick="pres('+num+')"'+' id=d'+num+''+' type="radio" name="'+num+'" value="d"><label for="d'+num+'">'+d+'</label>'+'</div>'
+
+    code1+='</div>'+'<div class="imagen"><img width="100%" src="'+imagen+'"alt=""></div></div></div>';
+
     container.innerHTML += code1;
     //container.innerHTML += code2;
     preguntas += 1
