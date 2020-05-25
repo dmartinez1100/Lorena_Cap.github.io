@@ -20,8 +20,28 @@ vec_preg = ['{"texto":"DECRETO 633 DE 2017:<br>Artículo 1°.- Delegar en los Al
 
 '{"texto":"¿Sabes qué es el PUM?<br/><br/>Es el Precio por Unidad de Medida, es decir que el comerciante debe dar a conocer al consumidor el costo de cada producto según sus características en: gramos, kilogramos, litros, mililitros, centímetros y metros o unidad según sea cada caso.<br><br/>Esto quiere decir que los establecimientos comerciales deben indicar cuál es el precio de cada artículo según las condiciones de pesaje del mismo, por ejemplo si usted compra una libra de carne, papa o azúcar, se debe indicar el PUM de un gramo o kilogramo, para el caso de un litro de leche, gaseosa u otro similar el PUM será indicado en litros o mililitros, en algunos casos simplemente se relaciona por unidad como puede ser el caso de algunas frutas o huevos entre otros.<br><br/>Entonces el PUM es fundamental para poder comparar el precio de los productos, por ejemplo una botella de agua de 500 ml cuesta $1.000 pesos, mientras  que una botella de 1 litro (1.000 ml)  cuesta $1.500 pesos; en el primer caso el PUM es de $2 pesos el ml, y en el segundo caso es de $1.5 el ml,  el cálculo se realiza simplemente dividiendo el precio del prodecto entre la cantidad de medida.<br><br/> El PUM deberá encontrase en etiquetas, empaques, adhesivos, los bienes mismos, envases y las góndolas o anaqueles de exhibición." ,"enunciado": "En Colombia el PUM para gasolina se mide por galones, si compras 2.5 galones de gasolina por valor de $25.000 pesos. Cuál es el Precio por Unidad de Medida de la gasolina?","respuestas": {"a": "a) $2.500 por galón.","b":"b) $10.000 por galón.","c":"c) $10.500 por galón.","d":"$12.500 por galón."},"resp_c": "b","imagen":"gasolina.gif"}',
 
-'{"texto":"REGLAMENTOS TECNICOS<br><br>Se define como el documento en el que se establecen las características de un producto o los procesos y métodos de producción con ellas relacionados, con inclusión de las disposiciones administrativas aplicables, y cuya observancia es obligatoria.<br><br>En la actualidad se disponen de RT en las siguientes categorías:<br> &nbsp;&nbsp;Productos de Consumo Personal<br>&nbsp;&nbsp;&nbsp;&nbsp;Etiquetas de calzado.<br>&nbsp;&nbsp;&nbsp;&nbsp;Etiquetado de confecciones.<br>&nbsp;&nbsp;&nbsp;&nbsp;Juguetes y sus accesorios.<br><br>&nbsp;&nbsp;Productos de Consumo en el Hogar<br>&nbsp;&nbsp;&nbsp;&nbsp;Aplicable a la etiqueta de baldosas cerámicas, que se produzcan, importen y comercialicen en Colombia.<br>&nbsp;&nbsp;&nbsp;&nbsp;De emergencia para los utensilios de vidrio, cerámica y vitrocerámica, las vajillas de vidrio, cerámica y vitrocerámica en contacto con alimentos, y los utensilios de cerámica empleados en la cocción de los alimentos.<br>&nbsp;&nbsp;&nbsp;&nbsp;Ollas de Presión de uso doméstico que se importen o produzcan nacionalmente para su comercialización en Colombia.<br>&nbsp;&nbsp;&nbsp;&nbsp;Aplicable a la etiqueta de pinturas base agua tipo emulsión de uso arquitectónico, para interiores o exteriores, que se fabriquen, importen o comercialicen en Colombia.<br>&nbsp;&nbsp;&nbsp;&nbsp;Etiquetado de baldosas cerámicas<br>&nbsp;&nbsp;&nbsp;&nbsp;Etiquetado de Pilas de Zinc-Carbón y Alcalinas.<br><br>" ,"enunciado": "En Colombia el PUM para gasolina se mide por galones, si compras 2.5 galones de gasolina por valor de $25.000 pesos. Cuál es el Precio por Unidad de Medida de la gasolina?","respuestas": {"a": "a) $2.500 por galón.","b":"b) $10.000 por galón.","c":"c) $10.500 por galón.","d":"$12.500 por galón."},"resp_c": "b","imagen":"gasolina.gif"}'
+'{"texto":"REGLAMENTOS TECNICOS<br><br>Se define como el documento en el que se establecen las características de un producto o los procesos y métodos de producción con ellas relacionados, con inclusión de las disposiciones administrativas aplicables, y cuya observancia es obligatoria.<br><br>En la actualidad se disponen de RT en las siguientes categorías:<br> &nbsp;&nbsp;&nbsp;&nbsp;Productos de Consumo Personal<br><br>*Etiquetas de calzado.<br>*Etiquetado de confecciones.<br>*Juguetes y sus accesorios.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Productos de Consumo en el Hogar<br><br>*Aplicable a la etiqueta de baldosas cerámicas, que se produzcan, importen y comercialicen en Colombia.<br>*De emergencia para los utensilios de vidrio, cerámica y vitrocerámica, las vajillas de vidrio, cerámica y vitrocerámica en contacto con alimentos, y los utensilios de cerámica empleados en la cocción de los alimentos.<br>*Ollas de Presión de uso doméstico que se importen o produzcan nacionalmente para su comercialización en Colombia.<br>*Aplicable a la etiqueta de pinturas base agua tipo emulsión de uso arquitectónico, para interiores o exteriores, que se fabriquen, importen o comercialicen en Colombia.<br>*Etiquetado de baldosas cerámicas<br>*Etiquetado de Pilas de Zinc-Carbón y Alcalinas.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Vehiculos<br><br>*Uso de cascos protectores para el uso de motocicletas, cuatrimotos, motocarros, moto triciclos y similares.<br>*Vehículos de servicio público de pasajeros y se dictan otras disposiciones.<br>*Cinturones de Seguridad para uso en Vehículos Automotores.<br>*Acristalamientos de seguridad para uso en vehículos automotores y sus remolques.<br>*Acristalamientos de seguridad resistente a las balas para uso en vehículos automotores y sus remolques.<br>*Sistemas de frenos de vehículos automotores.<br>*Llantas Neumáticas.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;Industria<br><br>*Reglamento técnico aplicable a alambre de acero liso, grafilado y mallas electrosoldadas.<br>*Reglamento Técnico de Etiquetado – RETIQ, con fines de Uso Racional de Energía aplicable a algunos equipos de uso final de energía eléctrica y gas combustible, para su comercialización y uso en Colombia.<br>*Reglamento Técnico aplicable a la información del estampe original, etiquetado y aspecto físico de cilindros sin costuras de alta presión para gases industriales y medicinales.<br>*Reglamento técnico de Instalaciones eléctricas RETIE.<br>*Reglamento Técnico empaques de los productos agrícolas para consumo humano.<br>*Reglamento técnico de Iluminación y alumbrado público RETILAP.<br>*Barras corrugadas.<br>*Reglamento técnico aplicable a cintas retrorreflectivas para uso en vehículos automotores y sus remolques que se fabriquen, importen o comercialicen en Colombia.<br>*Reglamento técnico para etiquetado de productos en circunstancias especiales.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;GNV y gas domiciliario<br><br>*Algunos gasodomésticos que se fabriquen nacionalmente o importen para ser comercializados en Colombia.Cilindros y tanques estacionarios.<br>*Instalaciones internas de gas combustible.<br>*Talleres, equipos y procesos de conversión a gas natural comprimido para uso vehicular.<br>*Estaciones para el suministro de Gas Natural Comprimido para uso vehicular." ,"enunciado": "Cual es la definición de metrologia legal:","respuestas": {"a": "a) Requisitos legales que se aplican a la medición, las unidades de medida, los instrumentos de medida y los métodos de medida.","b":"b) Establecen las características de un producto o los procesos y métodos de producción con ellas relacionados.","c":"c) Indica el precio del producto preempacado o a granel de acuerdo a la unidad de medida ya sea peso, volumen, longitud, área o cualquier magnitud que se ofrece a los consumidores","d":""},"resp_c": "a","imagen":"metrologia.gif"}',
+
+'{"texto":"" ,"enunciado": "Cual es la definición de reglamentos tecnicos:","respuestas": {"a": "a) Establecen las características de un producto o los procesos y métodos de producción con ellas relacionados.","b":"b) Requisitos legales que se aplican a la medición, las unidades de medida, los instrumentos de medida y los métodos de medida","c":"c) Indica el precio del producto preempacado o a granel de acuerdo a la unidad de medida ya sea peso, volumen, longitud, área o cualquier magnitud que se ofrece a los consumidores.","d":""},"resp_c": "a","imagen":"reglamentos_tec.gif"}',
+
+'{"texto":"" ,"enunciado": "Cual es la definición de PUM:","respuestas": {"a": "a) Establecen las características de un producto o los procesos y métodos de producción con ellas relacionados.","b":"b) Requisitos legales que se aplican a la medición, las unidades de medida, los instrumentos de medida y los métodos de medida","c":"c) Indica el precio del producto preempacado o a granel de acuerdo a la unidad de medida ya sea peso, volumen, longitud, área o cualquier magnitud que se ofrece a los consumidores.","d":""},"resp_c": "c","imagen":"PUM.gif"}'
 ]
+
+//var queryString = new Array();
+
+//console.log(queryString)
+//var params = window.location.search.split('?')[1].split('&');
+//for (var i = 0; i < params.length; i++) {
+ //   var key = params[i].split('=')[0];
+  //  var value = decodeURIComponent(params[i].split('=')[1]);
+   // queryString[key] = value;
+//}
+
+//if(queryString["nombre"] != null){
+ //   nombre2 = queryString["nombre"]
+//}
+//else
+ //   nombre2 = ""
 
 preguntas = 0
 respuestas = []
@@ -38,9 +58,6 @@ function comprobar_resp(){
     var inputs = []
     var flag = true
 
-    nombre = "David Martinez"
-    var URL = 'bien.html?name='+encodeURIComponent(nombre);
-    window.location.href = URL;
     for(var i=1;i<=preguntas;i++){
         elemento = document.querySelector('input[name="'+i+'"]:checked')
         if (elemento == null){
@@ -56,14 +73,12 @@ function comprobar_resp(){
         if(JSON.stringify(respuestas)==JSON.stringify(inputs)){
             console.log("Correcto")
             console.log("falso")
-            nombre = "David Martinez"
-            var URL = 'bien.html?name='+encodeURIComponent(nombre);
+            var URL = 'bien.html?nombre='+encodeURIComponent(nombre);
             window.location.href = URL;
         }
         else {
             console.log("falso")
-            nombre = "David Martinez"
-            var URL = 'mal.html?name='+encodeURIComponent(nombre);
+            var URL = 'mal.html?nombre='+encodeURIComponent(nombre);
             window.location.href = URL;
         }
     }
