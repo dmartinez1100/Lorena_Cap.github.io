@@ -58,7 +58,7 @@ for(var i=0;i<vec_preg.length;i++){
     j = JSON.parse(vec_preg[i])
     new_qest(j.texto,j.enunciado,j.respuestas.a,j.respuestas.b,j.respuestas.c,j.respuestas.d,j.resp_c,j.imagen,j.link)
 }
-console.log(respuestas);
+//console.log(respuestas);
 
 function comprobar_resp(){
     var flag = true;

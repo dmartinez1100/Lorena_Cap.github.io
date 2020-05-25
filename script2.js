@@ -25,10 +25,24 @@ if(queryString["preg_mal"] != null){
 url = window.location.href
 if(url.includes("mal.html")){
     document.getElementById('reng_1').innerHTML += '<p class="texto">Intentalo de Nuevo:</p>'
-    document.getElementById("nombre").innerHTML += nombre2
 }
+else{
+    async function prueba(){
+    doc = document.getElementById("cont")
+    doc.style.display = "none";
+    await sleep(2000)
+    document.body.style.background = "none"
+    doc.style.display = "grid";
+    }
+    prueba()
+}
+document.getElementById("nombre").innerHTML += nombre2
 
 function pg_prin(){
     var URL = 'index.html?nombre='+encodeURIComponent(nombre2);
     window.location.href = URL;
+}
+
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
