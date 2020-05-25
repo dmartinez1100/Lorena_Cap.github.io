@@ -119,6 +119,10 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
             agregado += string_a_agregar.length
         }
     }
+    if(texto.includes("youtube.com")){
+        texto = '<iframe width="100%" height="500vw" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>'
+        console.log("yt");
+    }
     code1 = '<div class="pregunta">'+'<div class="texto">'+texto+'</div>'+'<div '+'class = "enunciado"'+' >'+num+'. '+enunciado+'</div><div '+' id=mensaje'+num+''+' class="mensaje"></div><div class="'+clase_i+'">'+'<div class="respuestas">'
 
     code1+='<div class="respuesta respuesta_txt"><input onclick="pres('+num+')"'+' id=a'+num+''+' type="radio" name="'+num+'" value="a"><label '+'width="100%" '+'for="a'+num+'">'+a+'</label>'+'</div><br>'
