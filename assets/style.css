@@ -25,9 +25,9 @@ body{
     font: 50px piedra;
 }
 .boton{
-    display: block;
+    display: inline-flex;
     margin: auto;
-    width: 30%;
+    width: 100%;
     border-radius: 10px;
     align-content: center;
 }
@@ -80,10 +80,18 @@ body{
     display: inline;
 }
 .imagen{
+    display: block;
     justify-self: right;
+    margin: auto;
     max-width: 100%;
     height: auto;
+    align-content: center;
 }
 .respuestas{
     padding: 10%;
+}
+.mensaje{
+    background-color: rgba(255,0,0,.6);
+    font-size: 2vw;
+    border-radius: 10px;
 }
