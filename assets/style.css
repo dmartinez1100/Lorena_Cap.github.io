@@ -81,6 +81,8 @@ body{
 }
 .imagen{
     justify-self: right;
+    max-width: 100%;
+    height: auto;
 }
 .respuestas{
     padding: 10%;
