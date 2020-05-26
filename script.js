@@ -4,7 +4,7 @@ vec_preg = ['{"texto":"DECRETO 633 DE 2017:<br>Artículo 1°.- Delegar en los Al
 
 '{"texto":"" ,"enunciado": "De conformidad con los siguientes links:  y , En Colombia que productos tienen regulado su precio actualmente:","respuestas": {"a": "a) Leche cruda, arroz, huevos, productos agropecuarios y gasolina","b":"b) Gasolina, medicamentos, leche cruda y productos agropecuarios","c":"c) Arroz, gasolina, productos agropecuarios y huevos","d":"d) Huevos, medicamentos, gasolina y leche cruda"},"resp_c": "b","imagen":"homero.gif","link":{"URL":["https://www.portafolio.co/economia/gobierno/gobierno-reduce-precio-de-la-gasolina-en-el-pais-539104","https://www.sic.gov.co/control-de-precios"],"texto":["Link 1","Link 2"],"pos":[41,44]}}',
 
-'{"texto":"https://www.youtube.com/watch?v=z7t8CJTLuFM" ,"enunciado": "4- ¿El acaparamiento y la especulación son delitos tipificados en el código penal?","respuestas": {"a": "a) Falso","b":"b) Verdadero","c":"","d":""},"resp_c": "b","imagen":""}',
+'{"texto":"https://www.youtube.com/embed/z7t8CJTLuFM" ,"enunciado": "4- ¿El acaparamiento y la especulación son delitos tipificados en el código penal?","respuestas": {"a": "a) Falso","b":"b) Verdadero","c":"","d":""},"resp_c": "b","imagen":""}',
 
 '{"texto":"" ,"enunciado": "La definición el sustraer del comercio artículo o producto oficialmente considerado de primera necesidad corresponde a:","respuestas": {"a": "a)Acaparamiento","b":"b) Especulación","c":"c) Abuso de poder","d":"d) Posición dominante"},"resp_c": "a","imagen":"locos.gif"}',
 
@@ -54,7 +54,7 @@ respuestas = []
 element = document.getElementById("inombre")
 element.setAttribute('value', nombre2)
 
-shuffleArray(vec_preg)
+//shuffleArray(vec_preg)
 for(var i=0;i<vec_preg.length;i++){
     j = JSON.parse(vec_preg[i])
     new_qest(j.texto,j.enunciado,j.respuestas.a,j.respuestas.b,j.respuestas.c,j.respuestas.d,j.resp_c,j.imagen,j.link)
@@ -121,7 +121,9 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
         }
     }
     if(texto.includes("youtube.com")){
-        texto = '<iframe width="100%" height="500vw" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>'
+        console.log(texto)
+        texto = '<iframe width="100%" height="500vw" src="'+texto+'"> </iframe>'
+        
     }
     code1 = '<div class="pregunta">'+'<div class="texto">'+texto+'</div>'+'<div '+'class = "enunciado"'+' >'+num+'. '+enunciado+'</div><div '+' id=mensaje'+num+''+' class="mensaje"></div><div class="'+clase_i+'">'+'<div class="respuestas">'
 
