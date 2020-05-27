@@ -77,8 +77,6 @@ for(var i=0;i<vec_preg.length;i++){
     }
 }
 
-console.log(respuestas)
-
 function comprobar_resp(){
     var flag = true;
     var preg_mal = 0;
@@ -87,7 +85,7 @@ function comprobar_resp(){
         elemento = document.querySelector('input[name="'+i+'"]:checked')
         //console.log(i)
         if(respuestas[i-1] ==="N/A"){
-            console.log("hola")
+            //console.log("hola")
             pregunta_especial = probar_cuadros()
             if(pregunta_especial === -1){
                 preg_sin +=1;
@@ -121,11 +119,11 @@ function comprobar_resp(){
     }
     if(flag){
         if(preg_mal == 0){
-            var URL = 'bien.html?nombre='+encodeURIComponent(nombre);
+            var URL = 'assets/Secondary_pages/bien.html?nombre='+encodeURIComponent(nombre);
             window.location.href = URL;
         }
         else {
-            var URL = 'mal.html?nombre='+ encodeURIComponent(nombre) + "&preg_mal=" + encodeURIComponent(preg_mal);
+            var URL = 'assets/Secondary_pages/mal.html?nombre='+ encodeURIComponent(nombre) + "&preg_mal=" + encodeURIComponent(preg_mal);
             window.location.href = URL;
         }
     }
@@ -170,7 +168,7 @@ function new_qest(texto,enunciado,a,b,c,d,respuesta,imagen,link){
         }
     }
     if(texto.includes("youtube.com")){
-        console.log(texto)
+        //console.log(texto)
         texto = '<iframe width="100%" height="500vw" src="'+texto+'"> </iframe>'
         
     }

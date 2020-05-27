@@ -7,12 +7,12 @@ body{
     display: center;
 }
 .fondo{
-    background-image: url("img/fondo2.png");
+    background-image: url("/assets/img/fondo2.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     opacity: 1;
     position: absolute;
+    background-size: 100%;
 }
 .container{
     width: 65%;

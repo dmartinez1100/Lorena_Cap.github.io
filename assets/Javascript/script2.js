@@ -10,7 +10,7 @@ if (queryString.length == 0) {
         }
     }
 }
-
+console.log("hola")
 if(queryString["nombre"] != null){
     nombre2 = queryString["nombre"]
 }
@@ -39,7 +39,7 @@ else{
 document.getElementById("nombre").innerHTML += nombre2
 
 function pg_prin(){
-    var URL = 'index.html?nombre='+encodeURIComponent(nombre2);
+    var URL = '../../index.html?nombre='+encodeURIComponent(nombre2);
     window.location.href = URL;
 }
 
