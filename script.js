@@ -1,3 +1,16 @@
+let izquierdos = [];
+izquierdos = [
+    ['Productos de Consumo Personal.','Juguetes y sus accesorios.'],
+    ['Productos de Consumo en el Hogar.','Ollas de Presión de uso doméstico que se importen o produzcan nacionalmente para su comercialización en Colombia.'],
+    ['Vehiculo.','Uso de cascos protectores para el uso de motocicletas, cuatrimotos, motocarros, moto triciclos y similares.'],
+    ['Industria.','Reglamento técnico de Iluminación y alumbrado público RETILAP.'],
+    ['GNV y gas domiciliario.','Estaciones para el suministro de Gas Natural Comprimido para uso vehicular.']
+];
+
+respuestas_esp = ['<div ondragstart="dragStart(event)" draggable="true" id="r1" class="cuadro">Juguetes y sus accesorios.</div>','<div ondragstart="dragStart(event)" draggable="true" id="r2" class="cuadro">Ollas de Presión de uso doméstico que se importen o produzcan nacionalmente para su comercialización en Colombia.</div>','<div ondragstart="dragStart(event)" draggable="true" id="r3" class="cuadro">Uso de cascos protectores para el uso de motocicletas, cuatrimotos, motocarros, moto triciclos y similares.</div>','<div ondragstart="dragStart(event)" draggable="true" id="r4" class="cuadro">Reglamento técnico de Iluminación y alumbrado público RETILAP.</div>','<div ondragstart="dragStart(event)" draggable="true" id="r5" class="cuadro">Estaciones para el suministro de Gas Natural Comprimido para uso vehicular.</div>']
+shuffle(izquierdos)
+shuffle(respuestas_esp)
+
 vec_preg = ['{"texto":"DECRETO 633 DE 2017:<br>Artículo 1°.- Delegar en los Alcaldes Locales la facultad para ejercer en el ámbito de su territorio las funciones administrativas de control y vigilancia consagradas en el artículo 62 de la Ley 1480 de 2011 de acuerdo al procedimiento señalado en el artículo 60 ibídem.<br>Parágrafo. En los términos de la Ley 1480 del 2011, la delegación realizada en el presente Decreto es complementarla a la facultad consagrada en el numeral 12 del artículo 86 del Decreto Ley 1421 de 1993, para el efectivo control de precios, pesas y medidas, y el ejercicio de las acciones necesarias para evitar o sancionar el acaparamiento y la especulación.<br><br>Artículo 2°.- El presente Decreto rige a partir del día siguiente de su publicación." ,"enunciado": "De conformidad con el decreto 633 de 2017 la alcaldía mayor de Bogotá delego a los alcaldes locales facultades respecto:","respuestas": {"a": "a) control de precios, pesas y medidas, el acaparamiento y la especulación.","b":"b) Pesas, medidas, el acaparamiento y la especulación.","c":"c) Pesas, medidas, garantía, publicidad engañosa y control de precios.","d":"d) Publicidad engañosa, control de precios y medidas."},"resp_c": "a","imagen":"alcalde.gif"}',
 
 '{"texto":"" ,"enunciado": "los Alcaldes Locales tienen la facultad para ejercer en el ámbito de su territorio las funciones administrativas de inspección, control y vigilancia consagradas en el artículo 62 de la Ley 1480 de 2011.","respuestas": {"a": "a) Verdadero  ","b":"b) Falso","c":"","d":""},"resp_c": "b","imagen":""}',
@@ -59,6 +72,7 @@ for(var i=0;i<vec_preg.length;i++){
     j = JSON.parse(vec_preg[i])
     new_qest(j.texto,j.enunciado,j.respuestas.a,j.respuestas.b,j.respuestas.c,j.respuestas.d,j.resp_c,j.imagen,j.link)
 }
+preg_esp()
 console.log(respuestas);
 
 function comprobar_resp(){
@@ -148,11 +162,121 @@ function pres(num){
     elemento.innerHTML = ""
 }
 
-function shuffleArray(array) {
+function shuffle(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
+}
+
+function preg_esp(){
+    container = document.getElementById('cuerpo')
+    code1 = '<div id="pregunta-esp" class="pregunta">'
+    code1+= '<div id="container">'
+    
+    part_der = '<div id="derecha">'
+    part_izq = '<div id="izquierda">'
+    for(var i = 1;i<=5;i++){
+        part_der += '<div id="d'+i+'" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" class="vacio"></div>'
+        part_izq += '<div id="i'+i+'" class="cuadro">'+izquierdos[i-1][0]+'</div>'
+    }
+
+    //pr = document.getElementById("pregunta-esp")
+    code1 += part_izq+'</div>'
+    code1 += part_der+'</div>'
+    code1 += '<div id="cont_resp">'
+    container.innerHTML += '<div id="cont_resp">'+respuestas_esp.join('')+'</div>'
+    container.innerHTML += code1+'</div>'
+}
+
+//prove the correctness
+function probar_resp(){
+    correct = 0
+    for(var i =1;i<=izquierdos.length;i++){
+        izq = document.getElementById('i'+i).innerHTML
+        der = document.getElementById('d'+i).innerHTML
+        if(izquierdos[i-1][1]==der){
+            console.log(i)
+            console.log("bien "+i)
+            correct +=1
+        }
+    }
+    console.log("corectas ",correct)
+}
+//change two divs of position
+function change(source,target){
+    src_class = source.className
+    src_id = source.id
+    src_cont = source.innerHTML
+
+    source.setAttribute("class", target.className+" ");
+    source.innerHTML = target.innerHTML
+    source.setAttribute("ondrop", "drop(event)")
+    source.setAttribute("ondragenter", "dragEnter(event)")
+    source.setAttribute("ondragleave", "dragLeave(event)")
+    source.setAttribute("ondragover", "allowDrop(event)")
+    source.removeAttribute("draggable");
+    source.removeAttribute("ondragstart");
+
+    target.setAttribute("draggable", "true");
+    target.setAttribute("ondragstart", "dragStart(event)");
+    target.setAttribute("class", src_class);
+    target.innerHTML = src_cont
+    target.removeAttribute("ondrop");
+    target.removeAttribute("ondragenter");
+    target.removeAttribute("dragleave");
+    target.removeAttribute("ondragover");
+}
+
+//shuffle an array
+function shuffle(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+//drag events
+var source = new Object();
+//strat draggable element
+function dragStart(event) {
+    event.dataTransfer.setData("Text", event.target.id);
+    source = event.target.id
+    //console.log(source)
+}
+
+//dragged element enter to drag-box
+function dragEnter(event) {
+    //console.log("estoy en "+event.target.id)
+    document.getElementById(event.target.id).style.border = "3px dotted red";
+     
+}
+
+//draggable element leave a drag-box
+function dragLeave(event) {
+    console.log("leave")
+    document.getElementById(event.target.id).style.border = "";
+}
+
+//drag-element is inside a possible target
+function allowDrop(event) {
+    console.log("lo puedo_dejar_aqui")
+    event.preventDefault();
+}
+
+//drop action
+function drop(event) {
+    document.getElementById(event.target.id).style.border = "";
+    target = document.getElementById(event.target.id)
+    source = document.getElementById(source)
+
+    if(target !== null && source !== null){
+        change(source,target)
+        probar_resp()
+    }
+    event.preventDefault();
 }

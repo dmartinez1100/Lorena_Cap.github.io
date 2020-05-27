@@ -1016,12 +1016,13 @@ var source = new Object();
 function dragStart(event) {
     event.dataTransfer.setData("Text", event.target.id);
     source = event.dataTransfer.getData("Text");
+    console.log("w")
 }
 
 function dragEnter(event) {
     // Active esta parte cuándo ficha.posibilidades() esté lista
     let posibilidades = chessboard.boxes[row2num(source[0])][source[1]-1].piece.possibilites();
-    //console.log(posibilidades);
+    console.log(event.target.id);
     let target1 = event.target.id
     target1 = target1[0]+target1[1]
     //console.log("voy a " + target1);

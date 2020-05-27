@@ -1,0 +1,49 @@
+#container{
+    width: 75%;
+    height: 40vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
+#derecha{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#izquierda{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+    box-sizing: border-box;
+}
+.cuadro{
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(32, 165, 189);
+    height: 6vw;
+    width: 18vw;
+    margin: auto;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.vacio{
+    border-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    background-color: cornsilk;
+    height: 6vw;
+    width: 18vw;
+    margin: auto;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#cont_resp{
+    width: 75%;
+    height: 25vw;
+    margin: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;;
+}
