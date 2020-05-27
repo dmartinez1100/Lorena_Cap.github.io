@@ -119,7 +119,9 @@ input[type="text"]:focus {
     outline-style: none;
 }
 #pregunta-esp{
-    width: 100%;
+}
+#container{
+    width: 75%;
     height: 40vw;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -141,23 +143,25 @@ input[type="text"]:focus {
 .cuadro{
     border-color: rgb(0, 0, 0);
     background-color: rgb(32, 165, 189);
-    height: 6vw;
+    height: 7vw;
     width: 18vw;
     margin: auto;
     border-style: solid;
     border-radius: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 .vacio{
     border-color: rgb(0, 0, 0);
     box-sizing: border-box;
     background-color: cornsilk;
-    height: 6vw;
+    height: 7vw;
     width: 18vw;
     margin: auto;
     border-style: solid;
     border-radius: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 #cont_resp{
     width: 75%;

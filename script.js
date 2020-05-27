@@ -173,21 +173,20 @@ function shuffle(array) {
 
 function preg_esp(){
     container = document.getElementById('cuerpo')
-    code1 = '<div id="pregunta-esp" class="pregunta">'
+    code1 = '<div id="pregunta-esp">'
     code1+= '<div id="container">'
     
     part_der = '<div id="derecha">'
     part_izq = '<div id="izquierda">'
     for(var i = 1;i<=5;i++){
-        part_der += '<div id="d'+i+'" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" class="vacio"></div>'
+        part_der += '<div id="z'+i+'" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" class="vacio"></div>'
         part_izq += '<div id="i'+i+'" class="cuadro">'+izquierdos[i-1][0]+'</div>'
     }
 
     //pr = document.getElementById("pregunta-esp")
     code1 += part_izq+'</div>'
-    code1 += part_der+'</div>'
-    code1 += '<div id="cont_resp">'
-    container.innerHTML += '<div id="cont_resp">'+respuestas_esp.join('')+'</div>'
+    code1 += part_der+'</div>'+'</div>'
+    code1 += '<div id="cont_resp">'+respuestas_esp.join('')+'</div>'
     container.innerHTML += code1+'</div>'
 }
 
@@ -196,7 +195,7 @@ function probar_resp(){
     correct = 0
     for(var i =1;i<=izquierdos.length;i++){
         izq = document.getElementById('i'+i).innerHTML
-        der = document.getElementById('d'+i).innerHTML
+        der = document.getElementById('z'+i).innerHTML
         if(izquierdos[i-1][1]==der){
             console.log(i)
             console.log("bien "+i)
@@ -251,8 +250,11 @@ function dragStart(event) {
 
 //dragged element enter to drag-box
 function dragEnter(event) {
-    //console.log("estoy en "+event.target.id)
+    console.log("estoy en "+event.target.id)
+    console.log(document.getElementById(event.target.id))
     document.getElementById(event.target.id).style.border = "3px dotted red";
+    document.getElementById("d5").style.border = "3px dotted red";
+    //console.log(document.getElementById("d5"))
      
 }
 
@@ -264,7 +266,7 @@ function dragLeave(event) {
 
 //drag-element is inside a possible target
 function allowDrop(event) {
-    console.log("lo puedo_dejar_aqui")
+    //console.log("lo puedo_dejar_aqui")
     event.preventDefault();
 }
 
