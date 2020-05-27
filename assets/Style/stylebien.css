@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+html{
+    height: 100%;
+}
+body{
+    height: 90%;
+    background-color: black;
+    background-image: url("/assets/img/exitomin.gif");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    margin: 0;
+}
+.container{
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    vertical-align: center;
+    padding: 0;
+    margin: 0;
+}
+.txt{
+    width: 100%;
+    font: 5vw piedra;
+    text-align: center;
+    justify-self: center;
+    vertical-align: middle;
+    padding: 50% 0 0 0;
+}
