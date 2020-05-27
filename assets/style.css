@@ -15,7 +15,7 @@ body{
     position: absolute;
 }
 .container{
-    width: 75%;
+    width: 65%;
     margin: auto;
     opacity: 1;
 }
@@ -24,7 +24,7 @@ body{
     grid-template-rows: 100%;
     background-color: rgba(255,183,31,1);
     padding: 0px 0px 0px 0px;
-    font: 50px Fira Sans Condensed;
+    font: 4vw Fira Sans Condensed;
 }
 .boton{
     display: inline-flex;
@@ -94,9 +94,11 @@ body{
     padding: 10%;
 }
 .mensaje{
-    background-color: rgba(255,0,0,.6);
+    background-color: rgba(255,0,0,.4);
     font-size: 2vw;
-    border-radius: 10px;
+    border-radius: 100px;
+    padding: 0 0 0 100px;
+    width: 75%;
 }
 .dnombre{
     margin: auto;
@@ -107,7 +109,7 @@ body{
 }
 input[type="text"]
 {
-    font: 2.8vw Muli;
+    font: 2.1vw Muli;
     border-radius: 20px;
     border-style: dotted;
 
@@ -118,7 +120,7 @@ input[type="text"]:focus {
     outline-style: none;
 }
 #container{
-    width: 75%;
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -131,6 +133,7 @@ input[type="text"]:focus {
     grid-template-columns: 100%;
     height: 100%;
     box-sizing: border-box;
+    margin: auto;
 }
 #izquierda{
     display: grid;
