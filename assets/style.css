@@ -32,14 +32,15 @@ body{
     width: 100%;
     border-radius: 10px;
     align-content: center;
+    padding: 0 0 3% 0;
 }
 .boton1{
     margin: auto;
     align-content: center;
     border-radius: 10px;
-    background-color:red;
-    font: 2vw piedra;
-    color: white;
+    background-color:rgba(255,183,31,1);
+    font: 2vw Fira Sans Condensed;
+    color: black;
     height: 50px;
 }
 .boton1:hover{
@@ -47,8 +48,8 @@ body{
     align-content: center;
     border-radius: 10px;
     border-color: white;
-    background-color:red;
-    font: 2vw piedra;
+    background-color: rgba(255,183,31,.5);
+    font: 2vw Fira Sans Condensed;
     color: white;
     height: 50px;
 }
@@ -101,14 +102,12 @@ body{
     margin: auto;
     display: inline-flex;
     width: 100%;
-    font-size: 1.5vw;
-    justify-content: center;
-    padding: 2%;
-    font: 2vw arial;
+    justify-content: left;
+    padding: 0% 0 10% 2%;
 }
 input[type="text"]
 {
-    font:24px piedra;
+    font: 2.8vw Muli;
     border-radius: 20px;
     border-style: dotted;
 
@@ -118,15 +117,14 @@ input[type="text"]:focus {
     border: none;
     outline-style: none;
 }
-#pregunta-esp{
-}
 #container{
     width: 75%;
-    height: 40vw;
+    height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     margin: auto;
     box-sizing: border-box;
+    padding: 0 0 5% 0;
 }
 #derecha{
     display: grid;
@@ -142,14 +140,16 @@ input[type="text"]:focus {
 }
 .cuadro{
     border-color: rgb(0, 0, 0);
-    background-color: rgb(32, 165, 189);
-    height: 7vw;
-    width: 18vw;
+    background-color: rgba(255,183,31,.5);
+    height: 100%;
+    width: 25vw;
     margin: auto;
     border-style: solid;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
+    padding: 10px;
+    font: 1.5vw Muli;
 }
 .vacio{
     border-color: rgb(0, 0, 0);
@@ -165,9 +165,17 @@ input[type="text"]:focus {
 }
 #cont_resp{
     width: 75%;
-    height: 25vw;
-    margin: auto;
+    height: 100%;
+    padding: 0% 0% 5% 0;
+    margin: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#lnombre{
+    font: 3vw Acme;
+}
+.negrilla{
+    font: 1.5vw Muli;
+    font-weight: 900;
 }
